@@ -12,7 +12,11 @@ public class Studente {
     }
 
     public String details() {
-        return this.name + " " + this.surname + ", " + this.age + " anni";
+        if (this.name != null && this.name.length() > 0 && this.surname != null && this.surname.length() > 0 && this.age > 0) {
+            return this.name + " " + this.surname + ", " + this.age + " anni";
+        } else {
+            return "I dati dello studente sono incompleti";
+        }
     }
 
 }
