@@ -14,10 +14,18 @@ public class ContoBancario {
     }
 
     public void deposit(double amount) {
+        if (amount <= 0) {
+            System.out.println("Invalid amount");
+            return;
+        }
         this.balance += amount;
     }
 
     public void withdraw(double amount) {
+        if (amount <= 0) {
+            System.out.println("Invalid amount");
+            return;
+        }
         if (this.balance - amount < 0) {
             System.out.println("Insufficient funds");
         } else {
